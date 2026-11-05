@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
   }
   
   html {
@@ -12,26 +12,28 @@
   }
   
   body {
-    background-color: #08090D;
-    color: #F5F6FA;
+    background-color: #F4F6FB;
+    color: #0A0C11;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Custom Sleek Scrollbar */
+  /* Sleek Minimalist Studio Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #08090D;
+    background: #F4F6FB;
   }
   ::-webkit-scrollbar-thumb {
-    background: #181C28;
+    background: #CBD2E0;
     border-radius: 4px;
-    border: 2px solid #08090D;
+    border: 2px solid #F4F6FB;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #3157E8;
+    background: #2649F4;
   }
 }
 
@@ -47,30 +49,51 @@
   }
 }
 
-/* Editorial Glass & Surface Utility */
+/* Studio Bento Card Utilities */
+.bento-card-white {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E6F0;
+  border-radius: 28px;
+  box-shadow: 0 4px 20px -2px rgba(10, 12, 17, 0.03), 0 12px 32px -4px rgba(38, 73, 244, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card-white:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 12px 30px -4px rgba(10, 12, 17, 0.06), 0 20px 40px -6px rgba(38, 73, 244, 0.08);
+}
+
+.bento-card-blue {
+  background-color: #2649F4;
+  color: #FFFFFF;
+  border: 1px solid #2040DB;
+  border-radius: 28px;
+  box-shadow: 0 16px 40px -10px rgba(38, 73, 244, 0.38);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card-blue:hover {
+  box-shadow: 0 22px 50px -10px rgba(38, 73, 244, 0.48);
+}
+
+/* Subtle Editorial Background Grid */
+.subtle-studio-grid {
+  background-image: 
+    linear-gradient(to right, rgba(10, 12, 17, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 12, 17, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Legacy helper support */
 .editorial-card {
-  background: linear-gradient(135deg, rgba(22, 25, 34, 0.8) 0%, rgba(17, 19, 24, 0.95) 100%);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: #FFFFFF;
+  border: 1px solid #E2E6F0;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px -2px rgba(10, 12, 17, 0.03);
+  transition: all 0.3s ease;
 }
 
 .editorial-card:hover {
-  border-color: rgba(49, 87, 232, 0.35);
-  box-shadow: 0 20px 40px -15px rgba(49, 87, 232, 0.18);
-}
-
-.subtle-grid-bg {
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-/* Subtle Blue Glow effects */
-.glow-accent {
-  box-shadow: 0 0 25px rgba(49, 87, 232, 0.28);
-}
-
-.glow-subtle {
-  box-shadow: 0 0 15px rgba(49, 87, 232, 0.18);
+  border-color: rgba(38, 73, 244, 0.4);
+  box-shadow: 0 16px 36px -8px rgba(38, 73, 244, 0.12);
 }

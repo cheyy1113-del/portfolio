@@ -27,9 +27,10 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Selected Work', href: '#projects' },
-    { label: 'Business Risks', href: '#problems' },
+    { label: 'Work', href: '#projects' },
+    { label: 'Why It Matters', href: '#problems' },
     { label: 'Services', href: '#services' },
+    { label: 'Packages', href: '#packages' },
     { label: 'Process', href: '#process' },
     { label: 'About', href: '#about' },
   ];
@@ -38,7 +39,7 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-canvas/85 backdrop-blur-xl border-b border-border/80 py-3.5 shadow-2xl shadow-black/40'
+          ? 'bg-[#FFFFFF]/90 backdrop-blur-xl border-b border-[#E2E6F0] py-3.5 shadow-sm'
           : 'bg-transparent py-5'
       }`}
     >
@@ -47,29 +48,29 @@ export const Navbar: React.FC = () => {
           {/* Logo / Identity */}
           <a
             href="#"
-            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3157E8] rounded-lg"
+            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2649F4] rounded-lg"
           >
-            <div className="w-8 h-8 rounded-lg bg-canvas-card border border-border flex items-center justify-center font-display font-bold text-sm text-[#3157E8] group-hover:border-[#3157E8]/60 group-hover:shadow-[0_0_15px_rgba(49,87,232,0.3)] transition-all">
+            <div className="w-9 h-9 rounded-xl bg-[#2649F4] flex items-center justify-center font-display font-black text-sm text-white shadow-md shadow-[#2649F4]/20 group-hover:scale-105 transition-all">
               BC
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-bold text-base tracking-tight text-warm group-hover:text-[#3157E8] transition-colors">
+              <span className="font-display font-black text-base tracking-tight text-[#0A0C11] group-hover:text-[#2649F4] transition-colors">
                 B. CHAITANYA
               </span>
-              <span className="text-[10px] uppercase font-mono tracking-wider text-warm-dim flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-[10px] uppercase font-mono tracking-wider text-[#525866] flex items-center gap-1.5 font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 Available Worldwide
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 bg-canvas-card/80 border border-border/60 rounded-full px-4 py-1.5 backdrop-blur-md">
+          <nav className="hidden md:flex items-center gap-1 bg-[#FFFFFF] border border-[#E2E6F0] rounded-full px-5 py-2 shadow-sm">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="px-3 py-1.5 text-xs font-medium text-warm-muted hover:text-warm hover:bg-canvas-hover rounded-full transition-all duration-200"
+                className="px-3.5 py-1 text-xs font-semibold text-[#525866] hover:text-[#0A0C11] hover:bg-[#F4F6FB] rounded-full transition-all duration-200"
               >
                 {link.label}
               </a>
@@ -80,7 +81,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center gap-3">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3157E8] hover:bg-[#2445C7] text-white text-xs font-semibold uppercase tracking-wider transition-all duration-200 hover:shadow-[0_0_20px_rgba(49,87,232,0.4)] hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2649F4] hover:bg-[#1B3CD2] text-white text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md shadow-[#2649F4]/25 hover:shadow-lg hover:shadow-[#2649F4]/35 hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>Start a Project</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -91,13 +92,13 @@ export const Navbar: React.FC = () => {
           <div className="flex md:hidden items-center gap-2">
             <a
               href="#contact"
-              className="px-3 py-1.5 rounded-md bg-[#3157E8] text-white text-[11px] font-semibold uppercase tracking-wider"
+              className="px-3 py-1.5 rounded-full bg-[#2649F4] text-white text-[11px] font-bold uppercase tracking-wider"
             >
               Start
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-warm-muted hover:text-warm focus:outline-none"
+              className="p-2 text-[#525866] hover:text-[#0A0C11] focus:outline-none"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -108,14 +109,14 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-canvas-card/95 backdrop-blur-2xl border-b border-border px-6 py-6 animate-in slide-in-from-top duration-200">
+        <div className="md:hidden bg-[#FFFFFF] border-b border-[#E2E6F0] px-6 py-6 shadow-xl animate-in slide-in-from-top duration-200">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-medium text-warm-muted hover:text-warm py-2 border-b border-border/40 transition-colors"
+                className="text-sm font-semibold text-[#525866] hover:text-[#2649F4] py-2 border-b border-[#F4F6FB] transition-colors"
               >
                 {link.label}
               </a>
@@ -124,19 +125,19 @@ export const Navbar: React.FC = () => {
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-[#3157E8] hover:bg-[#2445C7] text-white text-xs font-bold uppercase tracking-wider"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#2649F4] hover:bg-[#1B3CD2] text-white text-xs font-bold uppercase tracking-wider shadow-md shadow-[#2649F4]/20"
               >
                 <span>Start a Project</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
-            <div className="pt-2 text-[11px] text-warm-dim flex items-center justify-center gap-2">
-              <Globe className="w-3.5 h-3.5 text-[#3157E8]" />
+            <div className="pt-2 text-[11px] text-[#525866] flex items-center justify-center gap-2">
+              <Globe className="w-3.5 h-3.5 text-[#2649F4]" />
               <span>Partnering with clients in US, UK, UAE &amp; Europe</span>
             </div>
 
             {/* Quick Social Links */}
-            <div className="pt-3 border-t border-border/40 flex items-center justify-center gap-5 text-warm-dim">
+            <div className="pt-3 border-t border-[#E2E6F0] flex items-center justify-center gap-5 text-[#525866]">
               <a
                 href={contactConfig.socials.linkedin.url}
                 target="_blank"
@@ -151,7 +152,7 @@ export const Navbar: React.FC = () => {
                 href={contactConfig.socials.x.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors p-1"
+                className="hover:text-[#0A0C11] transition-colors p-1"
                 aria-label="X Profile"
                 title="X"
               >
@@ -171,7 +172,7 @@ export const Navbar: React.FC = () => {
                 href={contactConfig.socials.threads.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors p-1"
+                className="hover:text-[#0A0C11] transition-colors p-1"
                 aria-label="Threads Profile"
                 title="Threads"
               >

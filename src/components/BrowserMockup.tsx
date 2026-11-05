@@ -18,27 +18,27 @@ export const BrowserMockup: React.FC<BrowserMockupProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-xl overflow-hidden border border-border bg-canvas-card shadow-2xl transition-all duration-300 group/browser ${className}`}
+      className={`rounded-2xl overflow-hidden border border-[#E2E6F0] bg-[#FFFFFF] shadow-xl shadow-slate-900/5 transition-all duration-300 group/browser ${className}`}
     >
       {/* Browser Chrome Header */}
-      <div className="bg-canvas-surface/90 backdrop-blur-md px-4 py-3 border-b border-border flex items-center justify-between gap-3 select-none">
+      <div className="bg-[#F8FAFC] px-4 py-3 border-b border-[#E2E6F0] flex items-center justify-between gap-3 select-none">
         {/* Window controls (Traffic lights) */}
         <div className="flex items-center gap-1.5 shrink-0">
-          <div className="w-3 h-3 rounded-full bg-red-500/80 group-hover/browser:bg-red-500 transition-colors" />
-          <div className="w-3 h-3 rounded-full bg-yellow-500/80 group-hover/browser:bg-yellow-500 transition-colors" />
-          <div className="w-3 h-3 rounded-full bg-green-500/80 group-hover/browser:bg-green-500 transition-colors" />
+          <div className="w-3 h-3 rounded-full bg-[#EF4444]/90 group-hover/browser:bg-[#EF4444] transition-colors" />
+          <div className="w-3 h-3 rounded-full bg-[#F59E0B]/90 group-hover/browser:bg-[#F59E0B] transition-colors" />
+          <div className="w-3 h-3 rounded-full bg-[#10B981]/90 group-hover/browser:bg-[#10B981] transition-colors" />
         </div>
 
         {/* Address Bar */}
-        <div className="flex-1 max-w-lg mx-auto bg-canvas-darker/80 border border-border/80 rounded-md px-3 py-1 flex items-center justify-between text-xs text-warm-dim">
+        <div className="flex-1 max-w-md mx-auto bg-[#FFFFFF] border border-[#E2E6F0] rounded-lg px-3 py-1 flex items-center justify-between text-xs shadow-2xs">
           <div className="flex items-center gap-1.5 truncate">
-            <Lock className="w-3 h-3 text-emerald-400 shrink-0" />
-            <span className="truncate font-mono text-[11px] text-warm-muted">
+            <Lock className="w-3 h-3 text-[#10B981] shrink-0" />
+            <span className="truncate font-mono text-[11px] text-[#525866] font-medium">
               {url.replace(/^https?:\/\//, '')}
             </span>
           </div>
           {badge && (
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-[#3157E8] bg-[#3157E8]/10 border border-[#3157E8]/20 px-1.5 py-0.5 rounded shrink-0">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#2649F4] bg-[#2649F4]/10 border border-[#2649F4]/20 px-2 py-0.5 rounded-full shrink-0">
               {badge}
             </span>
           )}
@@ -49,7 +49,7 @@ export const BrowserMockup: React.FC<BrowserMockupProps> = ({
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-warm-dim hover:text-[#3157E8] transition-colors p-1 rounded hover:bg-canvas-hover shrink-0"
+          className="text-[#525866] hover:text-[#2649F4] hover:bg-[#F1F5F9] transition-colors p-1.5 rounded-md shrink-0"
           title={`Open ${title} in new tab`}
           aria-label={`Open ${title} in new tab`}
         >
@@ -58,7 +58,7 @@ export const BrowserMockup: React.FC<BrowserMockupProps> = ({
       </div>
 
       {/* Viewport Content */}
-      <div className="relative overflow-hidden bg-canvas-darker">{children}</div>
+      <div className="relative overflow-hidden bg-[#0A0C11]">{children}</div>
     </div>
   );
 };

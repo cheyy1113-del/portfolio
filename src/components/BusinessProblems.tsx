@@ -13,17 +13,17 @@ export const BusinessProblems: React.FC = () => {
   ];
 
   return (
-    <section id="problems" className="py-24 md:py-32 relative border-t border-border/80 bg-canvas-darker">
+    <section id="problems" className="py-24 md:py-32 relative border-t border-[#E2E6F0] bg-[#FFFFFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#3157E8]/10 border border-[#3157E8]/30 text-[#3157E8] text-xs font-mono tracking-wider uppercase mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2649F4]/10 border border-[#2649F4]/20 text-[#2649F4] text-xs font-mono tracking-wider uppercase mb-4 font-semibold">
             <span>Risk Assessment &amp; Opportunity Cost</span>
           </div>
-          <h2 className="font-display font-bold text-3xl sm:text-5xl lg:text-6xl text-warm tracking-tight leading-[1.1] mb-6">
+          <h2 className="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-[#0A0C11] tracking-tight leading-[1.1] mb-6">
             Your Website Could Be Costing You Opportunities.
           </h2>
-          <p className="text-warm-muted text-base sm:text-lg leading-relaxed">
+          <p className="text-[#525866] text-base sm:text-lg leading-relaxed font-medium">
             When international prospects consider your company, their first interaction is almost always digital. If that experience introduces doubt, friction, or confusion, qualified deals evaporate before they even initiate an inquiry.
           </p>
         </div>
@@ -35,36 +35,36 @@ export const BusinessProblems: React.FC = () => {
             return (
               <div
                 key={prob.number}
-                className="group p-8 rounded-2xl bg-canvas-card border border-border hover:border-[#3157E8]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#3157E8]/5 flex flex-col justify-between"
+                className="group p-8 rounded-3xl bg-[#FFFFFF] border border-[#E2E6F0] hover:border-[#2649F4]/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#2649F4]/10 flex flex-col justify-between"
               >
                 <div>
                   {/* Top Bar with Number and Icon */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-xs font-bold text-[#3157E8] bg-[#3157E8]/10 px-2.5 py-1 rounded border border-[#3157E8]/20">
+                    <span className="font-mono text-xs font-bold text-[#2649F4] bg-[#2649F4]/10 px-3 py-1 rounded-full border border-[#2649F4]/20">
                       RISK {prob.number}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-canvas-surface border border-border group-hover:border-[#3157E8]/40 flex items-center justify-center text-warm-dim group-hover:text-[#3157E8] transition-all">
+                    <div className="w-10 h-10 rounded-xl bg-[#F4F6FB] border border-[#E2E6F0] group-hover:bg-[#2649F4] group-hover:text-white group-hover:border-[#2649F4] flex items-center justify-center text-[#525866] transition-all">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
                   {/* Title & Core Problem */}
-                  <h3 className="font-display font-bold text-xl text-warm mb-3 group-hover:text-white transition-colors">
+                  <h3 className="font-display font-extrabold text-xl text-[#0A0C11] mb-3 group-hover:text-[#2649F4] transition-colors">
                     {prob.title}
                   </h3>
-                  <div className="text-sm font-semibold text-warm-muted mb-4 leading-snug">
+                  <div className="text-sm font-semibold text-[#0A0C11]/85 mb-4 leading-snug">
                     {prob.riskDescription}
                   </div>
 
                   {/* Business Reality / Impact */}
-                  <p className="text-xs text-warm-dim leading-relaxed mb-6">
+                  <p className="text-xs text-[#525866] leading-relaxed mb-6 font-normal">
                     {prob.businessImpact}
                   </p>
                 </div>
 
                 {/* Solution Highlight */}
-                <div className="pt-4 border-t border-border/80 text-[11px] text-warm-muted flex items-start gap-2 group-hover:text-warm transition-colors">
-                  <ArrowRight className="w-3.5 h-3.5 text-[#3157E8] shrink-0 mt-0.5" />
+                <div className="pt-4 border-t border-[#E2E6F0] text-[11px] font-semibold text-[#525866] flex items-start gap-2 group-hover:text-[#0A0C11] transition-colors">
+                  <ArrowRight className="w-3.5 h-3.5 text-[#2649F4] shrink-0 mt-0.5" />
                   <span>{prob.solutionHighlight}</span>
                 </div>
               </div>
@@ -73,21 +73,21 @@ export const BusinessProblems: React.FC = () => {
         </div>
 
         {/* Editorial Takeaway Bar */}
-        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-canvas-card border border-border flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-[#F4F6FB] border border-[#E2E6F0] flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <h4 className="font-display font-bold text-lg text-warm">
+            <h4 className="font-display font-extrabold text-lg text-[#0A0C11]">
               The difference isn’t just aesthetic—it’s commercial.
             </h4>
-            <p className="text-xs sm:text-sm text-warm-dim max-w-2xl">
+            <p className="text-xs sm:text-sm text-[#525866] max-w-2xl font-medium">
               A strategic website positions your business as the premier authority in your space, pre-qualifies incoming inquiries, and makes taking the next step effortless.
             </p>
           </div>
           <a
             href="#projects"
-            className="shrink-0 px-6 py-3 rounded-lg bg-canvas-surface hover:bg-canvas-hover border border-border-bright text-warm text-xs font-semibold uppercase tracking-wider transition-all flex items-center gap-2 group"
+            className="shrink-0 px-6 py-3 rounded-full bg-[#FFFFFF] hover:bg-[#F8FAFC] border border-[#E2E6F0] text-[#0A0C11] text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 group shadow-xs hover:-translate-y-0.5"
           >
             <span>See How I Solve This</span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#3157E8] transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#2649F4] transition-transform group-hover:translate-x-1" />
           </a>
         </div>
       </div>

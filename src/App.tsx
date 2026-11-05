@@ -4,6 +4,7 @@ import { HeroSection } from './components/HeroSection';
 import { BusinessProblems } from './components/BusinessProblems';
 import { FeaturedProjects } from './components/FeaturedProjects';
 import { ServicesSection } from './components/ServicesSection';
+import { PackagesSection } from './components/PackagesSection';
 import { ProcessTimeline } from './components/ProcessTimeline';
 import { AboutSection } from './components/AboutSection';
 import { ConversionSection } from './components/ConversionSection';
@@ -20,7 +21,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-canvas text-warm flex flex-col font-sans selection:bg-[#3157E8] selection:text-white relative">
+    <div className="min-h-screen bg-[#F4F6FB] text-[#0A0C11] flex flex-col font-sans selection:bg-[#2649F4] selection:text-white relative">
       {/* Top Floating Navbar */}
       <Navbar />
 
@@ -38,13 +39,16 @@ export const App: React.FC = () => {
         {/* 4. Services & Capabilities */}
         <ServicesSection onSelectService={handleSelectService} />
 
-        {/* 5. Process & Delivery Timeline */}
+        {/* 5. Packages & "What's Included" Bento (From Reference Image) */}
+        <PackagesSection />
+
+        {/* 6. Process & Delivery Timeline */}
         <ProcessTimeline />
 
-        {/* 6. About the Developer */}
+        {/* 7. About the Developer */}
         <AboutSection />
 
-        {/* 7. Conversion Section & Inquiry Form */}
+        {/* 8. Conversion Section & Inquiry Form */}
         <ConversionSection selectedService={selectedServiceForForm} />
       </main>
 
